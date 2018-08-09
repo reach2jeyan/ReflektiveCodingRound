@@ -1,0 +1,201 @@
+[
+  {
+    "uri": "features/automation.feature",
+    "id": "reflective-coding-round",
+    "keyword": "Feature",
+    "name": "Reflective Coding round",
+    "description": "",
+    "line": 1,
+    "elements": [
+      {
+        "id": "reflective-coding-round;help-karan-reach-the-payment-gateway-and-calculate-his-expenses",
+        "keyword": "Scenario",
+        "name": "Help Karan reach the payment gateway and calculate his expenses",
+        "description": "",
+        "line": 3,
+        "type": "scenario",
+        "before": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1197451000
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I go to cleartrip website",
+            "line": 4,
+            "match": {
+              "location": "features/step_definitions/automation.rb:109"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12581834000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I choose round trip",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/automation.rb:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5298999000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I enter \"Bangalore\" in the from and \"Delhi\" in the destination",
+            "line": 6,
+            "match": {
+              "location": "features/step_definitions/automation.rb:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 313855000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I choose the date to two weeks from now and return the next day",
+            "line": 7,
+            "match": {
+              "location": "features/step_definitions/automation.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 20760351000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I enter other details and wait for the flight options",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/automation.rb:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29419123000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I choose the cheapest nonstrop flight and book the last flight the next day",
+            "line": 9,
+            "output": [
+              "Choosing the cheapest flight priced at ₹6,130",
+              "Choosing the last flight scheduled to depart at 22:40"
+            ],
+            "match": {
+              "location": "features/step_definitions/automation.rb:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 26677017000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I book the flight",
+            "line": 10,
+            "output": [
+              "Stuck at initiate booking page with url https://www.cleartrip.com/flights/initiate-booking. Kindly take on from here"
+            ],
+            "match": {
+              "location": "features/step_definitions/automation.rb:64"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 372154000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I go to amazon website",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/automation.rb:113"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12879455000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I search for the book \"A Brief History of Everyone Who Ever Lived\"",
+            "line": 12,
+            "match": {
+              "location": "features/step_definitions/automation.rb:71"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13087960000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "I purchase the book",
+            "line": 13,
+            "match": {
+              "location": "features/step_definitions/automation.rb:77"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9968881000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I wait for the payment page",
+            "line": 14,
+            "output": [
+              "##### Please make the payment process. YOU WOULD NEED TO SIGN IN #######"
+            ],
+            "match": {
+              "location": "features/step_definitions/automation.rb:90"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 78000
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I print the total expenditure for this trip to karan",
+            "line": 15,
+            "output": [
+              "********* PFB the expenditure details *********** \n Your round trip to delhi costs you ₹7,756 \n The cabfares cost you 500 INR \n The book A Brief History of Everyone Who Ever Lived costs you    424.00 \n The food expense costs you 3000 INR"
+            ],
+            "match": {
+              "location": "features/step_definitions/automation.rb:94"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 390000
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "features/support/hooks.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 60000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

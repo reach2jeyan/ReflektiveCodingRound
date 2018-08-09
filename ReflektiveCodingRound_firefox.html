@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Reflektive Report</title><link rel="icon" href="http://reportbuilder.rajatthareja.com/rb.ico">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" media="screen,projection"/>
+<link href="https://cdn.rawgit.com/rajatthareja/ReportBuilder/v1.6/css/report.builder.min.css" rel="stylesheet">
+</head><body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script><header class="brown lighten-5">
+<div class="row brown lighten-1">
+<div class="col m6 hide-on-small-only">
+<h5 class="truncate white-text tooltipped" data-tooltip="Reflektive Report">Reflektive Report</h5>
+</div><div class="col m6 s12 brown lighten-1">
+<ul class="tabs brown lighten-1 row" style="overflow-x: hidden">
+<li class="tab col s3">
+<a class="brown lighten-3 active blue-text waves-effect waves-light tooltipped" data-tooltip="Results Overview" href="#overview"><i class="material-icons">assessment</i> Overview</a>
+</li>
+<li class="tab col s3">
+<a class="brown lighten-3 white-text waves-effect waves-light tooltipped" data-tooltip="Scenarios by Features" href="#features"><i class="material-icons">view_headline</i> Features</a>
+</li>
+<li class="tab col s3">
+<a class="brown lighten-3 white-text waves-effect waves-light tooltipped" data-tooltip="Scenarios Summary Table" href="#summary"><i class="material-icons">view_comfy</i> Summary</a>
+</li>
+<li class="tab col s3">
+<a class="brown lighten-3 white-text waves-effect waves-light tooltipped" data-tooltip="Failed Scenarios" href="#errors"><i class="material-icons">bug_report</i> Errors</a>
+</li>
+</ul>
+</div>
+</div>
+</header>
+<div id="g0f0s0" class="modal modal-fixed-footer">
+<div class="modal-content"><h5>Help Karan reach the payment gateway and calculate his expenses (1m 30.62s)</h5>
+features/automation.feature:3
+<ul class="collection stepList"><li class="collection-item step passed">
+<b>Given </b> I go to cleartrip website (13.003s)</li>
+<li class="collection-item step passed">
+<b>And </b> I choose round trip (0.361s)</li>
+<li class="collection-item step passed">
+<b>Then </b> I enter "Bangalore" in the from and "Delhi" in the destination (0.170s)</li>
+<li class="collection-item step passed">
+<b>Then </b> I choose the date to two weeks from now and return the next day (5.979s)</li>
+<li class="collection-item step passed">
+<b>And </b> I enter other details and wait for the flight options (18.945s)</li>
+<li class="collection-item step passed">
+<b>Then </b> I choose the cheapest nonstrop flight and book the last flight the next day (13.832s)<pre>Choosing the cheapest flight priced at ₹6,130</pre><pre>Choosing the last flight scheduled to depart at 22:40</pre></li>
+<li class="collection-item step passed">
+<b>And </b> I book the flight (0.202s)<pre>Stuck at initiate booking page with url https://www.cleartrip.com/flights/results?adults=2&carrier=&childs=0&infants=0&from=BLR&to=DEL&intl=n&depart_date=03/08/2018&return_date=04/08/2018&page=loaded. Kindly take on from here</pre></li>
+<li class="collection-item step passed">
+<b>Then </b> I go to amazon website (18.640s)</li>
+<li class="collection-item step passed">
+<b>And </b> I search for the book "A Brief History of Everyone Who Ever Lived" (6.596s)</li>
+<li class="collection-item step passed">
+<b>Then </b> I purchase the book (8.189s)</li>
+<li class="collection-item step passed">
+<b>And </b> I wait for the payment page (0.000s)<pre>##### Please make the payment process. YOU WOULD NEED TO SIGN IN #######</pre></li>
+<li class="collection-item step passed">
+<b>And </b> I print the total expenditure for this trip to karan (0.082s)<pre>********* PFB the expenditure details *********** 
+ Your round trip to delhi costs you ₹11,896 
+ The cabfares cost you 500 INR 
+ The book A Brief History of Everyone Who Ever Lived costs you
+ The food expense costs you 3000 INR</pre></li>
+</ul></div><div class="modal-footer">
+<span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function () {$('#g0f0s0').modal();$('#g0f0s1').modal();});
+</script>
+<main class="brown lighten-5">
+<div class="row"><div id="overview" class="col s12 brown lighten-5">
+<div class="row">
+<div class="col m4 s12">
+<canvas id="featuresDoughnut" width="400" height="400"></canvas>
+<table id="metaDataFeatures" class="bordered">
+<tbody></tbody>
+</table>
+</div><div class="col m4 s12">
+<canvas id="scenariosDoughnut" width="400" height="400"></canvas>
+<table id="metaDataScenarios" class="bordered">
+<tbody></tbody>
+</table>
+</div><div class="col m4 s12">
+<table id="metaData" class="bordered">
+<tbody>
+<tr><th>Total Time</th><td>1m 30.62s</td></tr></tbody>
+</table>
+</div>
+</div></div><div id="features" class="col s12 brown lighten-5 white-text">
+<ul class="featureList collapsible popout" data-collapsible="expandable">
+<li class="feature working">
+<div class="collapsible-header brown lighten-1 waves-effect waves-light">
+<i class="material-icons">featured_play_list</i>
+<b>Feature</b>&nbsp;Reflective Coding round&nbsp;(1m 30.62s)
+</div><div class="collapsible-body brown lighten-4">
+<ul class="collection scenarioList"><li class="collection-item scenario passed">
+<a class="waves-effect waves-light modal-trigger white-text" href="#g0f0s0">
+<b>Scenario</b> Help Karan reach the payment gateway and calculate his expenses&nbsp;(1m 30.62s)
+</a>
+</li></ul>
+</div>
+</li>
+</ul></div><div id="summary" class="col s12 brown lighten-5">
+<table id="summaryTable" class="bordered brown lighten-1 white-text" width="100%">
+<thead>
+<tr>
+<th class="hide-on-small-only">Feature</th>
+<th>Scenario</th>
+<th class="hide">Tags</th>
+<th>Status</th>
+<th class="hide-on-small-only">Error</th>
+</tr>
+</thead>
+<tbody><tr class="passed">
+<td class="hide-on-small-only">
+Reflective Coding round
+</td><td class="hoverable">
+<a class="modal-trigger white-text" href="#g0f0s0">Help Karan reach the payment gateway and calculate his expenses</a>
+</td><td class="hide"></td><td class="uppercase">
+passed
+</td><td class="hide-on-small-only"></td></tr>
+</tbody>
+</table></div><div id="errors" class="col s12 brown lighten-5">
+<ul class="errorList collapsible popout" data-collapsible="expandable"></ul></div>
+</div>
+</main><footer class="page-footer brown lighten-4">
+<div class="footer-copyright brown lighten-1">
+<div class="container">
+Happy Reporting!
+<a class="white-text text-lighten-4 right" href="http://reportbuilder.rajatthareja.com">Generated by Report Builder</a>
+</div>
+</div>
+</footer><script type="text/javascript" src="https://cdn.rawgit.com/rajatthareja/ReportBuilder/v1.6/js/report.builder.min.js"></script></body>
+</html>

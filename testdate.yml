@@ -1,0 +1,7 @@
+Urls:
+  cleartrip: http://www.cleartrip.com
+  Amazon: http://www.amazon.in
+
+identifiers:
+  From: FromTag
+  Destination: ToTag
